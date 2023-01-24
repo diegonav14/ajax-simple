@@ -12,6 +12,7 @@
     </button>
 
     <h1 id='title'></h1>
+    <h2></h2>
 
     <script>
         function sendRequest(){
@@ -25,6 +26,7 @@
                     document.getElementById('title')
                     .innerHTML = httpReq.responseText;
                 }
+            httpReq.send();
             httpReq.send();
 
 
