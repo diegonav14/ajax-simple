@@ -17,7 +17,7 @@
     <script>
         function sendRequest(){
             const httpReq = new XMLHttpRequest();
-            httpReq.open('GET','back-end.php', true);
+            httpReq.open('POST','back-end.php', true);
             httpReq.setRequestHeader(
                 'Content-Type', 
                 'application/x-www-form-urlencoded'
@@ -26,10 +26,7 @@
                     document.getElementById('title')
                     .innerHTML = httpReq.responseText;
                 }
-            httpReq.send();
-            httpReq.send();
-
-
+            httpReq.send('username=Diego');
         }
     </script>
 </body>
